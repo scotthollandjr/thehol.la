@@ -1,0 +1,16 @@
+.container {
+  width: 400px;
+  margin: 100px auto;
+}
+
+.happy {
+  font-family: monospace;
+  font-size: 20pt;
+}
+
+.wow {
+  font-family: fantasy;
+  font-size: 32pt;
+  text-align: right;
+  margin-top: 32px;
+}
