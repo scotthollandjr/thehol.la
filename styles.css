@@ -1,11 +1,102 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
 .container {
-  width: 400px;
-  margin: 100px auto;
+  width: 450px;
+  padding-top: 300px;
+  margin: 0 auto;
 }
 
 .happy {
   font-family: monospace;
   font-size: 20pt;
+  margin-bottom: 32pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.one {
+  cursor: pointer;
+  animation: fall 1.75s ease;
+  margin-top: 4px;
+}
+
+.one:hover {
+  animation: popcorn 1.75s ease forwards;
+}
+
+.two {
+  cursor: pointer;
+  animation: fall 2.25s ease forwards;
+}
+
+.two:hover {
+  animation: popcorn 2.25s ease;
+}
+
+.three {
+  cursor: pointer;
+  animation: fall 2.75s ease forwards;
+  margin-bottom: 4px;
+}
+
+.three:hover {
+  animation: popcorn 2.75s ease;
+}
+
+@keyframes fall {
+  /* from {
+    letter-spacing: 50px;
+    transform: translateY(-300px) rotate(360deg);
+  }
+
+  to {
+    letter-spacing: 2px;
+    transform : translateY(0) rotate(0deg);
+  } */
+  0% {
+    letter-spacing: 1px;
+    /* transform : translateY(0) rotate(0deg); */
+    transform : translateY(0) rotate(0deg);
+  }
+  10% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  40% {
+    color: green;
+    letter-spacing: 20px;
+    opacity: .85;
+    transform: translateY(-150px) rotate(360deg) scale(.85);
+  }
+  50% {
+    color: aqua;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: navy;
+  }
+  80% {
+    color: fuchsia;
+  }
+  90% {
+    color: purple;
+  }
+  100% {
+    letter-spacing: 1px;
+    transform : translateY(0) rotate(720deg);
+  }
 }
 
 .wow {
@@ -13,4 +104,160 @@
   font-size: 32pt;
   text-align: right;
   margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.left {
+  width: 20px;
+  overflow: hidden;
+  animation: left 2.5s ease forwards;
+  cursor: pointer;
+  position: relative;
+}
+
+.inner-left {
+  position: relative;
+}
+
+.inner-left:hover {
+  animation: left-scroll 5s linear;
+}
+
+@keyframes left-scroll {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: -217px;
+  }
+}
+
+.right {
+  animation: right 2.5s ease forwards;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.right:hover .up {
+  animation: up 15s ease-in-out;
+}
+
+.right:hover .down {
+  animation: down 10s ease-in-out;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(1000px);
+  }
+
+  to {
+    transform : translateX(0);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(-1000px);
+  }
+
+  to {
+    transform : translateX(0);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform : translateY(0);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform : translateY(0);
+  }
+  10% {
+    transform: translateY(-100px) scale(1);
+    color: black;
+  }
+  11% { color: black; }
+  12% { color: orange; }
+  13% { color: black; }
+  14% { color: orange; }
+  15% { color: black; }
+  16% { color: orange; }
+  17% { color: black; }
+  18% { color: orange; }
+  19% { color: black; }
+  25% {
+    transform: translateY(-250px) scale(10) rotate(0deg);
+  }
+  21% {
+    transform: translateY(-210px) scale(10) rotate(2720deg);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+#holla {
+  height: 100px;
+  width: 100px;
+  overflow: visible;
+  position: absolute;
+  left: 150px;
+  bottom: 150px;
+  cursor: pointer;
+}
+
+.image {
+  background-image: url('holla.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  opacity: 0;
+}
+
+#holla:hover .image {
+  animation: show-holla 5s ease-in-out;
+}
+
+@keyframes show-holla {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(100);
+  }
+}
+
+.where {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  animation: flicker 5s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
