@@ -36,21 +36,25 @@
         <div class="left" id="age">0</div>
         <div class="right">
           <div class="down">w</div>
-          <div class="up">o</div>
-          <div class="down">w</div>
+          <div class="oh">o</div>
+          <div class="up">w</div>
+          <div class="woot">!</div>
         </div>
       </div>
     </div>
     <div id="holla">
-      <div class="image"></div>
+      <div class="image" onclick="happyBirthday()"></div>
     </div>
-    <div class="where">where has diana gone?</div>
+    <div class="where">
+      <span class="question">where has diana gone?</span>
+      <span class="blind">search blindly</span>
+    </div>
   </body>
   <script type="text/javascript">
     document.getElementById("holla").style.left=(Math.floor(Math.random() * 80) + 10) + '%';
     document.getElementById("holla").style.bottom=(Math.floor(Math.random() * 80) + 10) + '%';
     $({countNum: 0.00}).delay(3000).animate({countNum: 32}, {
-      duration: 3000,
+      duration: 4500,
       easing:'linear',
       step: function() {
         var num = this.countNum.toFixed(0);
@@ -61,5 +65,8 @@
         $('#age').text(num.toFixed(0));
       }
     });
+    function happyBirthday() {
+      alert("Happy birthday, Diana! I love you!");
+    }
   </script>
 </html>
