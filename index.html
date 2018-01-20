@@ -6,6 +6,7 @@
     <title>the holla</title>
     <meta name="description" content="The leading innovator in holla technology. See what holla can do for your business.">
     <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -32,13 +33,7 @@
         <div class="three">a</div>
       </div>
       <div class="wow">
-        <div class="left">
-          <div class="inner-left">34567890123</div>
-        </div>
-        <div class="left">
-          <div class="inner-left">23456789012</div>
-        </div>
-        <div class="left">&nbsp;</div>
+        <div class="left" id="age">0</div>
         <div class="right">
           <div class="down">w</div>
           <div class="up">o</div>
@@ -54,5 +49,17 @@
   <script type="text/javascript">
     document.getElementById("holla").style.left=(Math.floor(Math.random() * 80) + 10) + '%';
     document.getElementById("holla").style.bottom=(Math.floor(Math.random() * 80) + 10) + '%';
+    $({countNum: 0.00}).delay(3000).animate({countNum: 32}, {
+      duration: 3000,
+      easing:'linear',
+      step: function() {
+        var num = this.countNum.toFixed(0);
+        $('#age').text(num);
+      },
+      complete: function() {
+        var num = this.countNum;
+        $('#age').text(num.toFixed(0));
+      }
+    });
   </script>
 </html>

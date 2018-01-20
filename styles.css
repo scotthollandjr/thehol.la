@@ -22,7 +22,7 @@ body {
 .one {
   cursor: pointer;
   animation: fall 1.75s ease;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .one:hover {
@@ -41,7 +41,7 @@ body {
 .three {
   cursor: pointer;
   animation: fall 2.75s ease forwards;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .three:hover {
@@ -110,11 +110,9 @@ body {
 }
 
 .left {
-  width: 20px;
-  overflow: hidden;
+  width: 50px;
   animation: left 2.5s ease forwards;
-  cursor: pointer;
-  position: relative;
+  margin-right: 15px;
 }
 
 .inner-left {
@@ -254,8 +252,14 @@ body {
   0% {
     opacity: 0;
   }
+  35% {
+    opacity: 0;
+  }
   50% {
     opacity: .5;
+  }
+  65% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
