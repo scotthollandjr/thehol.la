@@ -196,8 +196,11 @@ body {
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform : rotate(720deg) scale(16);
+    transform : rotate(755deg) scale(16);
     opacity: 1;
+  }
+  55% {
+    transform : rotate(755deg) scale(16);
   }
   100% {
     transform : rotate(1440deg) scale(32);
@@ -257,6 +260,18 @@ body {
   100% {
     transform: scale(100);
   }
+}
+
+.info {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.info a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.2;
 }
 
 .where {
