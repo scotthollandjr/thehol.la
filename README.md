@@ -1,6 +1,6 @@
 # theholla
 
-A fun collection of animations to wish Diana a happy 32nd birthday, and to gift her a new domain ([thehol.la](thehol.la)). Built in plain HTML and CSS, and using jQuery, hosted on GitHub Pages.
+A fun collection of animations to wish Diana a happy 32nd birthday, and to gift her a new domain ([thehol.la](http://thehol.la)). Built in plain HTML and CSS, and using jQuery, hosted on GitHub Pages.
 
 ## Getting Started
 
